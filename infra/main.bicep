@@ -66,17 +66,6 @@ module aiSpeech 'modules/ai-speech.bicep' = {
   }
 }
 
-module containerApps 'modules/container-apps.bicep' = {
-  name: 'ca-${uniqueSuffix}-deployment'
-  scope: resourceGroup
-  params: {
-    environmentName: 'env-${uniqueSuffix}'
-    containerAppName: 'app-${uniqueSuffix}'
-    containerName: 'container${uniqueSuffix}'
-    imgTag: 'latest'
-  }
-}
-
 module containerRegistry 'modules/container-registry.bicep' = {
   name: 'cr-${uniqueSuffix}-deployment'
   scope: resourceGroup
