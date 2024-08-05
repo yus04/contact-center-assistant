@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Streamlit: chat.py",
+            "type": "python",
+            "request": "launch",
+            "module": "streamlit",
+            "console": "integratedTerminal",
+            "args": ["run", "${workspaceFolder}/app/chat.py"],
+            "justMyCode": true
+        }
+    ]
+}
