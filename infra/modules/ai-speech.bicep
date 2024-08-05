@@ -1,5 +1,5 @@
 @description('Azure region of the deployment')
-param location string
+param location string = resourceGroup().location
 
 @description('AI Speech resource name')
 param aiSpeechName string
