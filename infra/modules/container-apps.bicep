@@ -1,3 +1,5 @@
+// this file is not used in main.bicep
+
 @description('Azure region of the deployment')
 param location string = resourceGroup().location
 
