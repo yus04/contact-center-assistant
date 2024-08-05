@@ -21,7 +21,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2022-07-01' = {
     enablePurgeProtection: true
     networkAcls: {
       bypass: 'AzureServices'
-      defaultAction: 'Deny'
+      defaultAction: 'Allow'
     }
     sku: {
       family: 'A'
