@@ -58,19 +58,11 @@ module aiHub 'modules/ai-hub.bicep' = {
   }
 }
 
-module keyVault 'modules/key-vault.bicep' = {
-  name: 'kv-${uniqueSuffix}-deployment'
+module aiSpeech 'modules/ai-speech.bicep' = {
+  name: 'aispe-${uniqueSuffix}-deployment'
   scope: resourceGroup
   params: {
-    keyvaultName: 'kv-${uniqueSuffix}'
-  }
-}
-
-module storage 'modules/storage.bicep' = {
-  name: 'st-${uniqueSuffix}-deployment'
-  scope: resourceGroup
-  params: {
-    storageName: 'st${uniqueSuffix}'
+    aiSpeechName: 'aispe-${uniqueSuffix}'
   }
 }
 
@@ -90,6 +82,14 @@ module containerRegistry 'modules/container-registry.bicep' = {
   scope: resourceGroup
   params: {
     containerRegistryName: 'cr${uniqueSuffix}'
+  }
+}
+
+module keyVault 'modules/key-vault.bicep' = {
+  name: 'kv-${uniqueSuffix}-deployment'
+  scope: resourceGroup
+  params: {
+    keyvaultName: 'kv-${uniqueSuffix}'
   }
 }
 
@@ -124,6 +124,14 @@ module openai 'modules/openai.bicep' = {
         } 
       }
     ]
+  }
+}
+
+module storage 'modules/storage.bicep' = {
+  name: 'st-${uniqueSuffix}-deployment'
+  scope: resourceGroup
+  params: {
+    storageName: 'st${uniqueSuffix}'
   }
 }
 
