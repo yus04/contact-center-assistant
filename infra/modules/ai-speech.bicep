@@ -22,8 +22,8 @@ resource account 'Microsoft.CognitiveServices/accounts@2023-05-01' = {
   properties: {
     publicNetworkAccess: 'Enabled'
     networkAcls: {
-      defaultAction: 'Deny'
+      defaultAction: 'Allow'
     }
-    disableLocalAuth: true
+    disableLocalAuth: false
   }
 }
